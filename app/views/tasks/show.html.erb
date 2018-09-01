@@ -2,7 +2,8 @@
 <h3><%= link_to @task.title, task_path%></h3>
 <p><%=@task.description%></p>
 <p><%=@task.company%></p>
-<p><%=@task.url%></p>
-
-<%=link_to "edit", edit_task_path%>
-<%=link_to "delete",task_path, method: :delete, data: {confirm:"are you sure??"}%>
+<p class="button btn btn-default"><%= link_to "complete task",@task.url%></p></br></br>
+<%=link_to "home", root_path, class: "btn btn-sm btn-default"%>
+<%=link_to "edit", edit_task_path,  class: "btn btn-sm btn-default"%>
+<%=link_to "delete",task_path, method: :delete, data: {confirm:"are you sure??"},  class: "btn btn-sm btn-default"%>
+<%=link_to "back", :back,  class: "btn btn-sm btn-default"%>
